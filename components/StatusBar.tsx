@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import BatteryGauge from "react-battery-gauge";
 //@ts-ignore
 import WifiIndicator, { Streng } from "react-wifi-indicator";
@@ -61,7 +61,15 @@ export default function StatusBar({
     },
   };
 
-  const formatedDate = moment().format("hh:mm, dddd, MMMM D, YYYY");
+  const [formatedDate, setFormatedDate] = useState(
+    moment().format("hh:mm, dddd, MMMM D, YYYY")
+  );
+
+  useEffect(() => {
+    setInterval(() =>
+      setFormatedDate(moment().format("hh:mm, dddd, MMMM D, YYYY"))
+    );
+  }, []);
 
   return (
     <div className={clsx("navbar", "bg-gray-100 h-3 pt-0 px-5", style)}>

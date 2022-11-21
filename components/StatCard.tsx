@@ -13,7 +13,7 @@ interface StatCard {
 function StatCard({ text, number }: StatCard) {
   const [autoMode, setMode] = useState(true);
   return (
-    <div className="w-72 my-3 flex flex-col gap-2">
+    <div className="w-72 mt-2 flex flex-col gap-2">
       <div className="bg-blue-400 text-white flex gap-8 text-xl h-8 rounded-md pt-0.5 pl-2">
         <HiMapPin size={25}></HiMapPin>
         <div>{text}</div>
