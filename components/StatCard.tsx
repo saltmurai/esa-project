@@ -46,7 +46,7 @@ function StatCard({ text, number }: StatCard) {
         </div>
       </div>
       {autoMode ? (
-        <div className="flex flex-1 gap-2">
+        <div className="flex gap-2">
           <div className="flex-1 flex bg-blue-200 items-center rounded-md text-blue-600 p-2">
             <AiFillClockCircle size={25}></AiFillClockCircle>
             <div className="ml-2">12:00:00</div>
