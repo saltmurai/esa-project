@@ -19,4 +19,7 @@ body {
 	.setting-menu {
 		@apply card w-56 h-28 text-white rounded-md flex text-xl font-semibold
 	}
+	.setting-container {
+		@apply flex-1 bg-white rounded-md p-2 flex flex-col gap-2
+	}
 }

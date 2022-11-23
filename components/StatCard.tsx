@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { useState } from "react";
 import { AiFillClockCircle } from "react-icons/ai";
 import { BsFillCartFill } from "react-icons/bs";
-import { HiMapPin } from "react-icons/hi2";
+import { FaMapMarkerAlt } from "react-icons/fa";
 import { ImLoop2 } from "react-icons/im";
 
 interface StatCard {
@@ -14,8 +14,8 @@ function StatCard({ text, number }: StatCard) {
   const [autoMode, setMode] = useState(true);
   return (
     <div className="w-72 mt-2 flex flex-col gap-2">
-      <div className="bg-blue-400 text-white flex gap-8 text-xl h-8 rounded-md pt-0.5 pl-2">
-        <HiMapPin size={25}></HiMapPin>
+      <div className="bg-blue-400 text-white flex gap-8 text-xl h-8 rounded-md pl-2 flex items-center">
+        <FaMapMarkerAlt size={20}></FaMapMarkerAlt>
         <div>{text}</div>
       </div>
       <div className="flex flex-col bg-blue-400 text-white rounded-md justify-center pt-2 pb-2 gap-2 items-center">
