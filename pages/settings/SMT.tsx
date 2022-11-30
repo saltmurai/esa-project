@@ -6,6 +6,7 @@ import clsx from "clsx";
 import { IoIosSave } from "react-icons/io";
 import { GiCancel } from "react-icons/gi";
 import { AiOutlinePlus } from "react-icons/ai";
+import BackButton from "../../components/BackButton";
 
 function SMTSetting() {
   const router = useRouter();
@@ -16,10 +17,7 @@ function SMTSetting() {
           "bg-white h-20 rounded-md flex py-auto items-center px-2 py-1"
         )}
       >
-        <div className="btn bg-gray-100 border-none hover:bg-gray-200">
-          <MdKeyboardBackspace size={20} color={"black"}></MdKeyboardBackspace>
-          <div className="text-black ml-2">BACK</div>
-        </div>
+        <BackButton></BackButton>
         <BreadCrumb className="ml-2 flex-1" />
         <div className="flex gap-2">
           <div className="btn bg-blue-400 border-none text-white w-28 p-1 hover:bg-blue-500">

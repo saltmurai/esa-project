@@ -34,7 +34,10 @@ function Settings() {
           </div>
         </div>
         <div className="flex gap-4">
-          <div className="setting-menu bg-green-400 hover:bg-green-500">
+          <div
+            className="setting-menu bg-green-400 hover:bg-green-500"
+            onClick={() => router.push("/settings/AUTO")}
+          >
             <div className="mb-auto p-2">AUTO</div>
             <div className="flex justify-end mr-2 mb-3">
               <AiFillPlayCircle
