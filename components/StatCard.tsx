@@ -14,7 +14,7 @@ function StatCard({ text, number }: StatCard) {
   const [autoMode, setMode] = useState(true);
   return (
     <div className="w-72 mt-2 flex flex-col gap-2">
-      <div className="bg-blue-400 text-white flex gap-8 text-xl h-8 rounded-md pl-2 flex items-center">
+      <div className="bg-blue-400 text-white gap-8 text-xl h-8 rounded-md pl-2 flex items-center">
         <FaMapMarkerAlt size={20}></FaMapMarkerAlt>
         <div>{text}</div>
       </div>
@@ -55,7 +55,6 @@ function StatCard({ text, number }: StatCard) {
             <ImLoop2 size={25}></ImLoop2>
             <div className="ml-2">2:00</div>
           </div>
-          {/* TODO: add time API */}
         </div>
       ) : (
         ""

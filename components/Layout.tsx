@@ -9,6 +9,8 @@ export default function Layout({ children }: { children: ReactNode }) {
     batteryLevel: 90,
   };
 
+  //TODO: Fetching data here
+
   return (
     <div className="h-screen w-screen bg-gray-100 box-borer px-3 pb-2 flex flex-col gap-2 justify-between">
       <StatusBar

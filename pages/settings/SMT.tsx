@@ -7,9 +7,12 @@ import { IoIosSave } from "react-icons/io";
 import { GiCancel } from "react-icons/gi";
 import { AiOutlinePlus } from "react-icons/ai";
 import BackButton from "../../components/BackButton";
+import { useBearStore } from "../../lib/zustand";
 
 function SMTSetting() {
   const router = useRouter();
+  const bears = useBearStore((state: any) => state.bears);
+  const increment = useBearStore((state: any) => state.increasePopulation);
   return (
     <Layout>
       <div
@@ -20,9 +23,12 @@ function SMTSetting() {
         <BackButton></BackButton>
         <BreadCrumb className="ml-2 flex-1" />
         <div className="flex gap-2">
-          <div className="btn bg-blue-400 border-none text-white w-28 p-1 hover:bg-blue-500">
+          <div
+            className="btn bg-blue-400 border-none text-white w-28 p-1 hover:bg-blue-500"
+            onClick={increment}
+          >
             <IoIosSave size={25} className="mr-2"></IoIosSave>
-            Save
+            Save {bears}
           </div>
           <div className="btn bg-red-500 border-none text-white w-28 p-1 hover:bg-red-600">
             <GiCancel className="mr-2" size={25}></GiCancel>
@@ -56,7 +62,7 @@ function SMTSetting() {
         <div className="setting-container">
           <div className="w-full flex">
             <div className="flex-1 text-black font-semibold text-xl">
-              START POINTS
+              END POINTS
             </div>
             <div className="btn bg-blue-400 hover:bg-blue-500 text-white border-none rounded-sm p-1 w-20 h-8">
               <AiOutlinePlus size={23}></AiOutlinePlus>

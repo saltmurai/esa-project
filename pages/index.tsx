@@ -3,6 +3,7 @@ import { BottomNavbar } from "../components/BottomNavBar";
 import Layout from "../components/Layout";
 import StatCard from "../components/StatCard";
 import StatusBar, { RobotSignal } from "../components/StatusBar";
+import { useBearStore } from "../lib/zustand";
 
 export default function Home() {
   const data: RobotSignal = {
