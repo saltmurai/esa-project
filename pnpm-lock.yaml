@@ -21,6 +21,7 @@ specifiers:
   react-icons: ^4.6.0
   react-wifi-indicator: ^1.0.1
   reactflow: ^11.2.0
+  sweetalert2: ^11.6.15
   tailwindcss: ^3.2.4
   typescript: 4.9.3
   zustand: ^4.1.4
@@ -44,6 +45,7 @@ dependencies:
   react-icons: 4.6.0_react@18.2.0
   react-wifi-indicator: 1.0.1_v2m5e27vhdewzwhryxwfaorcca
   reactflow: 11.2.0_biqbaboplfbrettd7655fr4n2y
+  sweetalert2: 11.6.15
   typescript: 4.9.3
   zustand: 4.1.4_react@18.2.0
 
@@ -2499,6 +2501,10 @@ packages:
   /supports-preserve-symlinks-flag/1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
+
+  /sweetalert2/11.6.15:
+    resolution: {integrity: sha512-FqMy1gRGHEI5G145NE5XSP059TziCJu9Xf9/mkki/aKu5pLNcYzjggOzKO5Ex10EBgAGDXQ99jyGfYYzGCYXRQ==}
+    dev: false
 
   /tailwindcss/3.2.4_postcss@8.4.19:
     resolution: {integrity: sha512-AhwtHCKMtR71JgeYDaswmZXhPcW9iuI9Sp2LvZPo9upDZ7231ZJ7eA9RaURbhpXGVlrjX4cFNlB4ieTetEb7hQ==}

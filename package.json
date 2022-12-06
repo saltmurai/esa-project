@@ -27,6 +27,7 @@
     "react-icons": "^4.6.0",
     "react-wifi-indicator": "^1.0.1",
     "reactflow": "^11.2.0",
+    "sweetalert2": "^11.6.15",
     "typescript": "4.9.3",
     "zustand": "^4.1.4"
   },

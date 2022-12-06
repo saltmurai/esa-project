@@ -1,15 +1,18 @@
 import Layout from "../../components/Layout";
-import { MdKeyboardBackspace } from "react-icons/md";
-import { useRouter } from "next/router";
 import BreadCrumb from "../../components/BreadCrumbs";
 import clsx from "clsx";
 import { IoIosSave } from "react-icons/io";
 import { GiCancel } from "react-icons/gi";
-import { AiOutlinePlus } from "react-icons/ai";
 import BackButton from "../../components/BackButton";
+import StartPoint from "../../components/StartPoint";
+import SettingHeader from "../../components/SettingHeader";
+import { useBearStore } from "../../lib/zustand";
+import EndPoint from "../../components/EndPoint";
 
 function SMTSetting() {
-  const router = useRouter();
+  const startPoint = useBearStore((state: any) => state.startPoint);
+  const endPoint = useBearStore((state: any) => state.endPoint);
+  const removeAllPoint = useBearStore((state: any) => state.removeAllPoint);
   return (
     <Layout>
       <div
@@ -24,7 +27,10 @@ function SMTSetting() {
             <IoIosSave size={25} className="mr-2"></IoIosSave>
             Save
           </div>
-          <div className="btn bg-red-500 border-none text-white w-28 p-1 hover:bg-red-600">
+          <div
+            className="btn bg-red-500 border-none text-white w-28 p-1 hover:bg-red-600"
+            onClick={() => removeAllPoint()}
+          >
             <GiCancel className="mr-2" size={25}></GiCancel>
             Cancel
           </div>
@@ -32,48 +38,16 @@ function SMTSetting() {
       </div>
       <div className="bg-gray-100 h-full mt-3 rounded-md flex gap-3 px-2">
         <div className="setting-container">
-          <div className="w-full flex">
-            <div className="flex-1 text-black font-semibold text-xl">
-              START POINTS
-            </div>
-            <div className="btn bg-blue-400 hover:bg-blue-500 text-white border-none rounded-sm p-1 w-20 h-8">
-              <AiOutlinePlus size={23}></AiOutlinePlus>
-              ADD
-            </div>
-          </div>
-          <div className="bg-gray-100 flex rounded-md items-center px-2">
-            <div className="flex-1 text-black font-semibold">LINE 1</div>
-            <div className="gap-1 flex my-1">
-              <div className="btn bg-blue-400 border-none rounded-none text-white w-20 p-1 hover:bg-blue-500">
-                EDIT
-              </div>
-              <div className="btn bg-red-500 border-none rounded-none text-white w-20 p-1 hover:bg-red-600">
-                DELETE
-              </div>
-            </div>
-          </div>
+          <SettingHeader type="START POINTS"></SettingHeader>
+          {startPoint.map((point: string, index: number) => (
+            <StartPoint name={point} key={index}></StartPoint>
+          ))}
         </div>
         <div className="setting-container">
-          <div className="w-full flex">
-            <div className="flex-1 text-black font-semibold text-xl">
-              START POINTS
-            </div>
-            <div className="btn bg-blue-400 hover:bg-blue-500 text-white border-none rounded-sm p-1 w-20 h-8">
-              <AiOutlinePlus size={23}></AiOutlinePlus>
-              ADD
-            </div>
-          </div>
-          <div className="bg-gray-100 flex rounded-md items-center px-2">
-            <div className="flex-1 text-black font-semibold">LINE 1</div>
-            <div className="gap-1 flex my-1">
-              <div className="btn bg-blue-400 border-none rounded-none text-white w-20 p-1 hover:bg-blue-500">
-                EDIT
-              </div>
-              <div className="btn bg-red-500 border-none rounded-none text-white w-20 p-1 hover:bg-red-600">
-                DELETE
-              </div>
-            </div>
-          </div>
+          <SettingHeader type="END POINTS"></SettingHeader>
+          {endPoint.map((point: string, index: number) => (
+            <EndPoint name={point} key={index}></EndPoint>
+          ))}
         </div>
       </div>
     </Layout>
