@@ -25,13 +25,13 @@ const Flow = () => {
     const rootNodes = startPoint.map((point: any, index: number) => ({
       id: `${index}`,
       type: "custom",
-      data: { name: point },
+      data: { name: point.name },
       position: { x: 0, y: index * 50 },
     }));
     const leafNodes = endPoint.map((point: any, index: number) => ({
       id: `${index + startPoint.length}`,
       type: "custom",
-      data: { name: point },
+      data: { name: point.name },
       position: { x: 200 * (index + 1), y: -200 },
     }));
     return [...rootNodes, ...leafNodes];

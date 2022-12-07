@@ -7,11 +7,6 @@ import StatusBar, { RobotSignal } from "../components/StatusBar";
 import { useBearStore } from "../lib/zustand";
 
 export default function Home() {
-  const data: RobotSignal = {
-    wifiLevel: "GREAT",
-    batteryLevel: 90,
-  };
-
   return (
     <Layout>
       <div className={clsx("bg-white p-2", "flex h-2/5", "rounded-md")}>

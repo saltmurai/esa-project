@@ -8,6 +8,8 @@ import { GiCancel } from "react-icons/gi";
 import { AiOutlinePlus } from "react-icons/ai";
 import BackButton from "../../components/BackButton";
 import { useBearStore } from "../../lib/zustand";
+import SettingHeader from "../../components/SettingHeader";
+import SettingContent from "../../components/Flow/SettingContent";
 
 function SMTSetting() {
   const router = useRouter();
@@ -38,48 +40,18 @@ function SMTSetting() {
       </div>
       <div className="bg-gray-100 h-full mt-3 rounded-md flex gap-3 px-2">
         <div className="setting-container">
-          <div className="w-full flex">
-            <div className="flex-1 text-black font-semibold text-xl">
-              START POINTS
-            </div>
-            <div className="btn bg-blue-400 hover:bg-blue-500 text-white border-none rounded-sm p-1 w-20 h-8">
-              <AiOutlinePlus size={23}></AiOutlinePlus>
-              ADD
-            </div>
-          </div>
-          <div className="bg-gray-100 flex rounded-md items-center px-2">
-            <div className="flex-1 text-black font-semibold">LINE 1</div>
-            <div className="gap-1 flex my-1">
-              <div className="btn bg-blue-400 border-none rounded-none text-white w-20 p-1 hover:bg-blue-500">
-                EDIT
-              </div>
-              <div className="btn bg-red-500 border-none rounded-none text-white w-20 p-1 hover:bg-red-600">
-                DELETE
-              </div>
-            </div>
-          </div>
+          <SettingHeader type="START POINTS"></SettingHeader>
+          <SettingContent
+            type="START POINTS"
+            options={["KHO SMT"]}
+          ></SettingContent>
         </div>
         <div className="setting-container">
-          <div className="w-full flex">
-            <div className="flex-1 text-black font-semibold text-xl">
-              END POINTS
-            </div>
-            <div className="btn bg-blue-400 hover:bg-blue-500 text-white border-none rounded-sm p-1 w-20 h-8">
-              <AiOutlinePlus size={23}></AiOutlinePlus>
-              ADD
-            </div>
-          </div>
-          <div className="bg-gray-100 flex rounded-md items-center px-2">
-            <div className="flex-1 text-black font-semibold">LINE 1</div>
-            <div className="gap-1 flex my-1">
-              <div className="btn bg-blue-400 border-none rounded-none text-white w-20 p-1 hover:bg-blue-500">
-                EDIT
-              </div>
-              <div className="btn bg-red-500 border-none rounded-none text-white w-20 p-1 hover:bg-red-600">
-                DELETE
-              </div>
-            </div>
-          </div>
+          <SettingHeader type="START POINTS"></SettingHeader>
+          <SettingContent
+            type="END POINTS"
+            options={["VT1", "VT2", "VT3", "VT4"]}
+          ></SettingContent>
         </div>
       </div>
     </Layout>

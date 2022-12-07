@@ -14,6 +14,7 @@
     "@types/node": "18.11.9",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.9",
+    "axios": "^1.2.1",
     "clsx": "^1.2.1",
     "daisyui": "^2.41.0",
     "eslint": "8.27.0",
@@ -27,6 +28,7 @@
     "react-icons": "^4.6.0",
     "react-wifi-indicator": "^1.0.1",
     "reactflow": "^11.2.0",
+    "reactjs-popup": "^2.0.5",
     "sweetalert2": "^11.6.15",
     "typescript": "4.9.3",
     "zustand": "^4.1.4"

@@ -8,11 +8,14 @@ import StartPoint from "../../components/StartPoint";
 import SettingHeader from "../../components/SettingHeader";
 import { useBearStore } from "../../lib/zustand";
 import EndPoint from "../../components/EndPoint";
+import { AiOutlinePlus } from "react-icons/ai";
+import { useState } from "react";
+import SettingContent from "../../components/Flow/SettingContent";
 
 function SMTSetting() {
-  const startPoint = useBearStore((state: any) => state.startPoint);
   const endPoint = useBearStore((state: any) => state.endPoint);
   const removeAllPoint = useBearStore((state: any) => state.removeAllPoint);
+
   return (
     <Layout>
       <div
@@ -39,15 +42,17 @@ function SMTSetting() {
       <div className="bg-gray-100 h-full mt-3 rounded-md flex gap-3 px-2">
         <div className="setting-container">
           <SettingHeader type="START POINTS"></SettingHeader>
-          {startPoint.map((point: string, index: number) => (
-            <StartPoint name={point} key={index}></StartPoint>
-          ))}
+          <SettingContent
+            options={["KHO ASM", "KHO SMT"]}
+            type="START POINTS"
+          ></SettingContent>
         </div>
         <div className="setting-container">
           <SettingHeader type="END POINTS"></SettingHeader>
-          {endPoint.map((point: string, index: number) => (
-            <EndPoint name={point} key={index}></EndPoint>
-          ))}
+          <SettingContent
+            options={["VT1", "VT2", "VT3", "VT4"]}
+            type="END POINTS"
+          ></SettingContent>
         </div>
       </div>
     </Layout>
