@@ -12,17 +12,12 @@ async function fetchStatus() {
 }
 
 export default function Layout({ children }: { children: ReactNode }) {
-  const { data, isLoading, isError } = useQuery(["status"], fetchStatus, {});
-  console.log(data);
-  //TODO: Fetching data here
+  // const { data, isLoading, isError } = useQuery(["status"], fetchStatus, {});
+  // //TODO: Fetching data here
 
   return (
     <div className="h-screen w-screen bg-gray-100 box-borer px-3 pb-2 flex flex-col gap-2 justify-between">
-      <StatusBar
-        wifiLevel={"GREAT"}
-        batteryLevel={isLoading ? 0 : data.battery_level * 100}
-        style="bg-gray-100"
-      />
+      <StatusBar wifiLevel={"GREAT"} batteryLevel={80} style="bg-gray-100" />
       {children}
       <BottomNavbar />
     </div>

@@ -16,7 +16,7 @@ const nodeTypes = {
   custom: CustomNode,
 };
 
-const initEdges = [];
+const initEdges: any[] = [];
 
 const Flow = () => {
   const startPoint = useBearStore((state: any) => state.startPoint);
